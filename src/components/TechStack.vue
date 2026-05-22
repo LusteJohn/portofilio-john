@@ -11,7 +11,7 @@ const toolCategories = [
         name: 'Figma',
         mark: 'F',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
-        score: 98,
+        score: 70,
         focus: 'UI Systems',
         accent: '#f97316',
         accentSoft: 'rgba(249, 115, 22, 0.22)'
@@ -20,7 +20,7 @@ const toolCategories = [
         name: 'Sketch',
         mark: 'S',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-line.svg',
-        score: 92,
+        score: 90,
         focus: 'Wireframing',
         accent: '#f59e0b',
         accentSoft: 'rgba(245, 158, 11, 0.22)'
@@ -30,7 +30,7 @@ const toolCategories = [
         name: 'Postman',
         mark: 'P',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg',
-        score: 92,
+        score: 85,
         focus: 'API Testing',
         accent: '#f59e0b',
         accentSoft: 'rgba(245, 158, 11, 0.22)'
@@ -44,7 +44,7 @@ const toolCategories = [
         name: 'Vue.js',
         mark: 'V',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
-        score: 95,
+        score: 80,
         focus: 'Component Architecture',
         accent: '#10b981',
         accentSoft: 'rgba(16, 185, 129, 0.22)'
@@ -53,7 +53,7 @@ const toolCategories = [
         name: 'Tailwind',
         mark: 'Tw',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
-        score: 93,
+        score: 80,
         focus: 'Design Systems',
         accent: '#06b6d4',
         accentSoft: 'rgba(6, 182, 212, 0.22)'
@@ -62,7 +62,7 @@ const toolCategories = [
         name: 'React',
         mark: 'R',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
-        score: 90,
+        score: 80,
         focus: 'Type Safety',
         accent: '#2563eb',
         accentSoft: 'rgba(37, 99, 235, 0.22)'
@@ -85,7 +85,7 @@ const toolCategories = [
         name: 'Laravel',
         mark: 'Lr',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg',
-        score: 94,
+        score: 90,
         focus: 'API + Services',
         accent: '#ef4444',
         accentSoft: 'rgba(239, 68, 68, 0.22)'
@@ -94,7 +94,7 @@ const toolCategories = [
         name: 'PostgreSQL',
         mark: 'Pg',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
-        score: 91,
+        score: 87,
         focus: 'Data Modeling',
         accent: '#1d4ed8',
         accentSoft: 'rgba(29, 78, 216, 0.22)'
@@ -103,7 +103,7 @@ const toolCategories = [
         name: 'Docker',
         mark: 'Dk',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg',
-        score: 88,
+        score: 80,
         focus: 'Container Workflow',
         accent: '#0ea5e9',
         accentSoft: 'rgba(14, 165, 233, 0.22)'
@@ -112,7 +112,7 @@ const toolCategories = [
         name: 'SQL',
         mark: 'Sq',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg',
-        score: 95,
+        score: 90,
         focus: 'Query Optimization',
         accent: '#2563eb',
         accentSoft: 'rgba(37, 99, 235, 0.22)'
