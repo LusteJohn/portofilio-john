@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background: #131313;
+  color: #e5e2e1;
+}
+
+/* Light Mode Styles */
+.theme-light {
+  background-color: #fffbfe;
+  color: #1c1b1f;
+}
+
+.theme-light body {
+  background-color: #fffbfe;
+  color: #1c1b1f;
+}
+
+/* Smooth transitions for theme changes */
+.theme-light,
+.theme-light * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
