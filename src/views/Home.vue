@@ -27,15 +27,43 @@ const heroStats = [
   { label: 'Avg. Performance Gain', value: '30%' }
 ]
 
+const buildPreviewImages = (folder, files) =>
+  files.map((file) => new URL(`../assets/assests/project-image/${folder}/${file}`, import.meta.url).href)
+
+const projectPreviewImages = {
+  agriLearnSchool: buildPreviewImages('AgriSchoolLearn', [
+    'p5-1.png',
+    'p5-2.png',
+    'p5-3.png',
+    'p5-4.png',
+    'p5-5.png',
+    'p5-6.png',
+    'p5-7.png',
+    'p5-8.png',
+    'p5-9.png'
+  ]),
+  enterpriseDashboard: buildPreviewImages('DRDTS', ['p2-1.png', 'p2-2.png', 'p2-3.png', 'p2-4.png']),
+  analyticsPlatform: buildPreviewImages('InternTrack', ['p6-1.png', 'p6-2.png', 'p6-3.png', 'p6-4.png', 'p6-5.png']),
+  ecommercePlatform: buildPreviewImages('school-portal', [
+    'p4-1.png',
+    'p4-2.png',
+    'p4-3.png',
+    'p4-4.png',
+    'p4-5.png',
+    'p4-6.png'
+  ])
+}
+
 const projectHighlights = [
   {
-    title: 'QR Code Attendance System',
-    type: 'Live Deployment',
+    title: 'AgriLearnSchool',
+    type: 'Student Learning Platform',
     description:
-      'A real-time tracking system for enterprise events, processing scans in under 100ms using Laravel Echo and Redis.',
+      'AgriLearnSchool is an educational platform designed for students to learn the fundamentals and advanced concepts of agriculture. It provides interactive lessons, practical guides, and learning resources that cover crop production, soil management, livestock care, and modern farming techniques. The platform aims to help students develop agricultural knowledge and skills that are useful for sustainable farming and agri-related careers.',
     stack: ['Laravel', 'Vue 3', 'WebSockets'],
     icon: 'qr_code_2',
     image: 'https://images.unsplash.com/photo-1611532736aff-f0f9a87cfdda?w=1200&h=600&fit=crop&q=80',
+    previewImages: projectPreviewImages.agriLearnSchool,
     author: 'John Mark',
     role: 'Full Stack Developer',
     link: 'https://github.com'
@@ -48,6 +76,7 @@ const projectHighlights = [
     stack: ['Tailwind', 'Inertia.js', 'PostgreSQL'],
     icon: 'dashboard_customize',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop&q=80',
+    previewImages: projectPreviewImages.enterpriseDashboard,
     author: 'John Mark',
     role: 'Full Stack Developer',
     link: 'https://github.com'
@@ -60,6 +89,7 @@ const projectHighlights = [
     stack: ['Vue 3', 'Node.js', 'MongoDB'],
     icon: 'trending_up',
     image: 'https://images.unsplash.com/photo-1460925895917-afd88faa7ee6?w=1200&h=600&fit=crop&q=80',
+    previewImages: projectPreviewImages.analyticsPlatform,
     author: 'John Mark',
     role: 'Full Stack Developer',
     link: 'https://github.com'
@@ -72,6 +102,7 @@ const projectHighlights = [
     stack: ['Laravel', 'Vue 3', 'Stripe'],
     icon: 'shopping_cart',
     image: 'https://images.unsplash.com/photo-1522869635100-ce5f555177ef?w=1200&h=600&fit=crop&q=80',
+    previewImages: projectPreviewImages.ecommercePlatform,
     author: 'John Mark',
     role: 'Full Stack Developer',
     link: 'https://github.com'
