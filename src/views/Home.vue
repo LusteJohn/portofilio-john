@@ -44,7 +44,7 @@ const projectPreviewImages = {
   ]),
   disasterRiskPlatform: buildPreviewImages('DRDTS', ['p2-1.png', 'p2-2.png', 'p2-3.png', 'p2-4.png']),
   internTrack: buildPreviewImages('InternTrack', ['p6-1.png', 'p6-2.png', 'p6-3.png', 'p6-4.png', 'p6-5.png']),
-  ecommercePlatform: buildPreviewImages('school-portal', [
+  schoolPortal: buildPreviewImages('school-portal', [
     'p4-1.png',
     'p4-2.png',
     'p4-3.png',
@@ -108,14 +108,14 @@ const projectHighlights = [
     link: 'https://github.com'
   },
   {
-    title: 'Multi-Vendor E-Commerce Platform',
-    type: 'Full Stack',
+    title: 'School Portal',
+    type: 'Educational Institution Website',
     description:
       'Scalable marketplace with payment processing, inventory management, and automated fulfillment handling 10K+ transactions daily.',
-    stack: ['Laravel', 'Vue 3', 'Stripe'],
+    stack: ['Laravel', 'Tailwind', 'PostgreSQL'],
     icon: 'shopping_cart',
-    image: 'https://images.unsplash.com/photo-1522869635100-ce5f555177ef?w=1200&h=600&fit=crop&q=80',
-    previewImages: projectPreviewImages.ecommercePlatform,
+    image: new URL('../assets/assests/project-image/school-portal/p4-1.png', import.meta.url).href,
+    previewImages: projectPreviewImages.schoolPortal,
     author: 'John Mark',
     role: 'Entry Level Web & System Developer',
     link: 'https://github.com'

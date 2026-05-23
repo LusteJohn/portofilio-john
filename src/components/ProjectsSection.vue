@@ -285,8 +285,8 @@ onUnmounted(() => {
 }
 
 .modal-shell {
-  width: min(980px, 100%);
-  max-height: 90vh;
+  width: min(1180px, 96vw);
+  max-height: 80vh;
   overflow: hidden;
   border-radius: 24px;
   border: 1px solid rgba(203, 190, 255, 0.2);
@@ -326,7 +326,7 @@ onUnmounted(() => {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: 1.5rem;
-  padding: 1.5rem 1.8rem 2rem;
+  padding: 1.4rem 1.8rem 1.6rem;
   overflow: auto;
 }
 
