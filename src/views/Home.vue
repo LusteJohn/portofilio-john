@@ -42,7 +42,7 @@ const projectPreviewImages = {
     'p5-8.png',
     'p5-9.png'
   ]),
-  enterpriseDashboard: buildPreviewImages('DRDTS', ['p2-1.png', 'p2-2.png', 'p2-3.png', 'p2-4.png']),
+  disasterRiskPlatform: buildPreviewImages('DRDTS', ['p2-1.png', 'p2-2.png', 'p2-3.png', 'p2-4.png']),
   analyticsPlatform: buildPreviewImages('InternTrack', ['p6-1.png', 'p6-2.png', 'p6-3.png', 'p6-4.png', 'p6-5.png']),
   ecommercePlatform: buildPreviewImages('school-portal', [
     'p4-1.png',
@@ -51,6 +51,19 @@ const projectPreviewImages = {
     'p4-4.png',
     'p4-5.png',
     'p4-6.png'
+  ]),
+  sgms: buildPreviewImages('SGMS', [
+    'p1-1.png',
+    'p1-2.png',
+    'p1-3.png'
+  ]),
+  svpmfs: buildPreviewImages('SVPMFS', [
+    'p3-1.png',
+    'p3-2.png',
+    'p3-3.png',
+    'p3-4.png',
+    'p3-5.png',
+    'p3-6.png'
   ])
 }
 
@@ -60,25 +73,25 @@ const projectHighlights = [
     type: 'Student Learning Platform',
     description:
       'AgriLearnSchool is an educational platform designed for students to learn the fundamentals and advanced concepts of agriculture. It provides interactive lessons, practical guides, and learning resources that cover crop production, soil management, livestock care, and modern farming techniques. The platform aims to help students develop agricultural knowledge and skills that are useful for sustainable farming and agri-related careers.',
-    stack: ['Laravel', 'Vue 3', 'WebSockets'],
+    stack: ['React', 'PostgreSQL', 'SQLite', 'Javascript'],
     icon: 'qr_code_2',
-    image: 'https://images.unsplash.com/photo-1611532736aff-f0f9a87cfdda?w=1200&h=600&fit=crop&q=80',
+      image: new URL('../assets/assests/project-image/AgriSchoolLearn/p5-1.png', import.meta.url).href,
     previewImages: projectPreviewImages.agriLearnSchool,
     author: 'John Mark',
-    role: 'Full Stack Developer',
+    role: 'Entry Level Web & System Developer',
     link: 'https://github.com'
   },
   {
-    title: 'Enterprise Management Dashboard',
-    type: 'Internal Tool',
+    title: 'Disaster Relief Distribution Tracking System',
+    type: 'Barangay Management Platform',
     description:
       'Comprehensive ERP-style interfaces with multi-tenant permissions and dynamic data visualization for operations teams.',
-    stack: ['Tailwind', 'Inertia.js', 'PostgreSQL'],
+    stack: ['Tailwind', 'Laravel', 'PostgreSQL'],
     icon: 'dashboard_customize',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop&q=80',
-    previewImages: projectPreviewImages.enterpriseDashboard,
+    image: new URL('../assets/assests/project-image/DRDTS/p2-1.png', import.meta.url).href,
+    previewImages: projectPreviewImages.disasterRiskPlatform,
     author: 'John Mark',
-    role: 'Full Stack Developer',
+    role: 'Entry Level Web & System Developer',
     link: 'https://github.com'
   },
   {
@@ -118,7 +131,10 @@ const stackIcons = {
   PostgreSQL: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
   'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
   MongoDB: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg',
-  Stripe: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'
+  Stripe: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+  Javascript: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+  SQLite: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg',
+  MySQL: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg'
 }
 
 const getStackIcon = (stackItem) => stackIcons[stackItem] || ''
