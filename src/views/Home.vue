@@ -43,7 +43,7 @@ const projectPreviewImages = {
     'p5-9.png'
   ]),
   disasterRiskPlatform: buildPreviewImages('DRDTS', ['p2-1.png', 'p2-2.png', 'p2-3.png', 'p2-4.png']),
-  analyticsPlatform: buildPreviewImages('InternTrack', ['p6-1.png', 'p6-2.png', 'p6-3.png', 'p6-4.png', 'p6-5.png']),
+  internTrack: buildPreviewImages('InternTrack', ['p6-1.png', 'p6-2.png', 'p6-3.png', 'p6-4.png', 'p6-5.png']),
   ecommercePlatform: buildPreviewImages('school-portal', [
     'p4-1.png',
     'p4-2.png',
@@ -85,7 +85,7 @@ const projectHighlights = [
     title: 'Disaster Relief Distribution Tracking System',
     type: 'Barangay Management Platform',
     description:
-      'Comprehensive ERP-style interfaces with multi-tenant permissions and dynamic data visualization for operations teams.',
+      'A web-based platform designed to monitor, manage, and track the distribution of relief goods and assistance during disasters. The system helps ensure accurate allocation, real-time tracking, and efficient delivery of aid to affected communities while improving transparency and coordination among responders.',
     stack: ['Tailwind', 'Laravel', 'PostgreSQL'],
     icon: 'dashboard_customize',
     image: new URL('../assets/assests/project-image/DRDTS/p2-1.png', import.meta.url).href,
@@ -95,16 +95,16 @@ const projectHighlights = [
     link: 'https://github.com'
   },
   {
-    title: 'Real-Time Analytics Platform',
-    type: 'SaaS Product',
+    title: 'InternTrack',
+    type: 'Student Internship Management System',
     description:
       'Advanced analytics dashboard with real-time data streaming, custom report generation, and predictive insights powered by ML.',
-    stack: ['Vue 3', 'Node.js', 'MongoDB'],
+    stack: ['PHP', 'JQuery', 'MySQL', 'Tailwind'],
     icon: 'trending_up',
-    image: 'https://images.unsplash.com/photo-1460925895917-afd88faa7ee6?w=1200&h=600&fit=crop&q=80',
-    previewImages: projectPreviewImages.analyticsPlatform,
+    image: new URL('../assets/assests/project-image/InternTrack/p6-1.png', import.meta.url).href,
+    previewImages: projectPreviewImages.internTrack,
     author: 'John Mark',
-    role: 'Full Stack Developer',
+    role: 'Entry Level Web & System Developer',
     link: 'https://github.com'
   },
   {
@@ -117,7 +117,7 @@ const projectHighlights = [
     image: 'https://images.unsplash.com/photo-1522869635100-ce5f555177ef?w=1200&h=600&fit=crop&q=80',
     previewImages: projectPreviewImages.ecommercePlatform,
     author: 'John Mark',
-    role: 'Full Stack Developer',
+    role: 'Entry Level Web & System Developer',
     link: 'https://github.com'
   }
 ]
@@ -134,7 +134,11 @@ const stackIcons = {
   Stripe: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
   Javascript: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
   SQLite: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg',
-  MySQL: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg'
+  MySQL: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
+  React: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+  PHP: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
+  JQuery: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg',
+
 }
 
 const getStackIcon = (stackItem) => stackIcons[stackItem] || ''
