@@ -50,8 +50,15 @@ const projects = [
   }
 ]
 
-const printResume = () => {
-  window.print()
+const showResumeModal = ref(false)
+const resumePdfUrl = new URL('../assets/assests/resume/John Mark Luste - Resume.pdf', import.meta.url).href
+
+const openResumeModal = () => {
+  showResumeModal.value = true
+}
+
+const closeResumeModal = () => {
+  showResumeModal.value = false
 }
 
 const goHome = () => {
@@ -109,10 +116,10 @@ onMounted(() => {
           <button
             class="header-action-btn gap-1.5 bg-gradient-to-br from-primary to-primary-container text-on-primary"
             type="button"
-            @click="printResume"
+            @click="openResumeModal"
           >
-            <span class="material-symbols-outlined text-[14px]">download</span>
-            <span>DOWNLOAD</span>
+            <span class="material-symbols-outlined text-[14px]">visibility</span>
+            <span>VIEW</span>
           </button>
           <button
             :aria-label="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
@@ -274,6 +281,34 @@ onMounted(() => {
         </div>
       </div>
     </main>
+
+    <div
+      v-if="showResumeModal"
+      class="no-print fixed inset-0 z-[60] flex items-center justify-center bg-black/70 px-4 py-10"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Resume PDF preview"
+      @click.self="closeResumeModal"
+    >
+      <div class="flex h-full w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-outline-variant/20 bg-surface shadow-2xl">
+        <div class="flex items-center justify-between border-b border-outline-variant/20 px-6 py-4">
+          <div class="space-y-1">
+            <p class="text-xs font-label uppercase tracking-[0.2em] text-outline">Resume Preview</p>
+            <h3 class="font-headline text-lg font-bold text-on-surface">John Mark Luste</h3>
+          </div>
+          <button
+            class="header-action-btn border border-outline-variant/30 bg-surface-container-high text-[#e5e2e1]/75"
+            type="button"
+            @click="closeResumeModal"
+          >
+            CLOSE
+          </button>
+        </div>
+        <div class="flex-1 bg-surface-container-high">
+          <iframe class="h-full w-full" :src="resumePdfUrl" title="Resume PDF"></iframe>
+        </div>
+      </div>
+    </div>
 
     <footer class="resume-footer no-print w-full border-t border-[#464555]/20 bg-[#1c1b1b] py-16">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row md:px-8">
