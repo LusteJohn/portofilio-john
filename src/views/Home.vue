@@ -8,7 +8,7 @@ import profileImage from '../assets/assests/images/profile.png'
 
 const heroRoles = [
   {
-    title: 'Full Stack Developer',
+    title: 'Entry Level Full Stack Developer',
     description: 'Crafting high-performance digital ecosystems with architectural precision and editorial elegance.'
   },
   {
@@ -23,7 +23,7 @@ const heroRoles = [
 
 const heroStats = [
   { label: 'Years Building', value: '2+' },
-  { label: 'Systems, Web Applications, and Websites', value: '20+' },
+  { label: 'Systems, Web Applications, and Websites', value: '10+' },
   { label: 'Avg. Performance Gain', value: '30%' }
 ]
 
@@ -468,7 +468,7 @@ onUnmounted(() => {
                 <div>
                   <h4 class="mb-1 font-headline text-xl font-bold text-on-surface">Deep API Integrations</h4>
                   <p class="text-on-surface-variant">
-                    Building robust REST and GraphQL layers that bridge diverse data sources with ironclad security
+                    Building robust REST layers that bridge diverse data sources with ironclad security
                     protocols.
                   </p>
                 </div>
