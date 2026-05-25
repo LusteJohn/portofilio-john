@@ -6,7 +6,7 @@ import profileImage from '../assets/assests/images/profile.png'
 const router = useRouter()
 const isDarkMode = ref(true)
 
-const skills = ['Git & GitHub', 'HTML5', 'CSS3', 'JavaScript', 'Laravel', 'SQL', 'React', 'Vue.js', 'Tailwind', 'Bootstrap', 'Storybook', 'Oracle SQL']
+const skills = ['Git & GitHub', 'HTML5', 'CSS3', 'JavaScript', 'Laravel', 'SQL', 'React', 'Vue.js', 'Tailwind', 'Bootstrap', 'Storybook', 'Oracle SQL', 'PHP']
 
 const experience = [
   {
@@ -166,10 +166,10 @@ onMounted(() => {
             </div>
             <div class="space-y-2">
               <h2 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface">John Mark Luste</h2>
-              <p class="font-medium tracking-wide text-primary">Software Engineer Intern</p>
+              <p class="font-medium tracking-wide text-primary">Entry Level Web & System Developer</p>
             </div>
             <p class="text-sm leading-relaxed text-on-surface-variant">
-              Full-stack web developer with expertise in system design, school management systems, and interactive web applications.
+              Entry Level Web & System Developer with expertise in system design, school management systems, and interactive web applications.
               Proficient in PHP, Laravel, Vue.js, React, and modern web technologies. Passionate about creating scalable and
               user-centric solutions.
             </p>
@@ -216,6 +216,10 @@ onMounted(() => {
               <div>
                 <p class="text-sm font-bold text-on-surface">High School Diploma - With Honors</p>
                 <p class="text-xs text-on-surface-variant">Bato National High School - 2020</p>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-on-surface">Elementary School Diploma - With Honors</p>
+                <p class="text-xs text-on-surface-variant">Sherman Hill Integrated School - 2017</p>
               </div>
             </div>
           </section>
@@ -329,15 +333,23 @@ onMounted(() => {
       </div>
     </div>
 
-    <footer class="resume-footer no-print w-full border-t border-[#464555]/20 bg-[#1c1b1b] py-16">
-      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row md:px-8">
-        <div class="resume-footer-brand font-headline font-bold tracking-tighter text-[#e5e2e1]">ARCHITECT.</div>
+    <footer class="w-full border-t border-outline-variant/10 bg-surface-container-low px-4 py-12 md:px-8">
+      <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
+        <div class="text-sm font-medium uppercase tracking-wide text-on-surface-variant">&copy; 2024 Digital Architect. Built with precision.</div>
         <div class="flex gap-8">
-          <a class="resume-footer-link text-[0.75rem] font-label uppercase tracking-widest text-[#e5e2e1]/40 transition-colors hover:text-[#cbbeff]" href="#">SOURCE</a>
-          <a class="resume-footer-link text-[0.75rem] font-label uppercase tracking-widest text-[#e5e2e1]/40 transition-colors hover:text-[#cbbeff]" href="#">LINKEDIN</a>
-          <a class="resume-footer-link text-[0.75rem] font-label uppercase tracking-widest text-[#e5e2e1]/40 transition-colors hover:text-[#cbbeff]" href="#">SITEMAP</a>
+          <a class="text-sm font-medium uppercase tracking-wide text-on-surface-variant transition-colors duration-200 hover:text-primary" href="#"
+            >Github</a
+          >
+          <a class="text-sm font-medium uppercase tracking-wide text-on-surface-variant transition-colors duration-200 hover:text-primary" href="#"
+            >LinkedIn</a
+          >
+          <a class="text-sm font-medium uppercase tracking-wide text-on-surface-variant transition-colors duration-200 hover:text-primary" href="#"
+            >Twitter</a
+          >
+          <a class="text-sm font-medium uppercase tracking-wide text-on-surface-variant transition-colors duration-200 hover:text-primary" href="#"
+            >Layers</a
+          >
         </div>
-        <div class="resume-footer-meta text-[0.75rem] font-label uppercase tracking-widest text-[#e5e2e1]/40">© 2024 THE DIGITAL ARCHITECT. CODED IN THE VOID.</div>
       </div>
     </footer>
   </div>
