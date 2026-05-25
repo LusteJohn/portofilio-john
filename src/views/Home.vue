@@ -64,6 +64,18 @@ const projectPreviewImages = {
     'p3-4.png',
     'p3-5.png',
     'p3-6.png'
+  ]),
+  simplesarisari: buildPreviewImages('simplesarisari', [
+    'p8-1.png',
+    'p8-2.png',
+    'p8-3.png',
+    'p8-4.png'
+  ]),
+  simplebloglaravel: buildPreviewImages('simplebloglaravel', [
+    'p7-1.png',
+    'p7-2.png',
+    'p7-3.png',
+    'p7-4.png'
   ])
 }
 
@@ -119,6 +131,45 @@ const projectHighlights = [
     author: 'John Mark',
     role: 'Entry Level Web & System Developer',
     link: 'https://github.com'
+  },
+  {
+    title: 'SVPMFS',
+    type: 'Economic Platform System',
+    description:
+      'web‑based platform designed to streamline vendor product management and enhance decision‑making through predictive analytics.',
+    stack: ['Laravel', 'Tailwind', 'PostgreSQL', 'Python'],
+    icon: 'shopping_cart',
+    image: new URL('../assets/assests/project-image/SVPMFS/p3-1.png', import.meta.url).href,
+    previewImages: projectPreviewImages.svpmfs,
+    author: 'John Mark',
+    role: 'Entry Level Web & System Developer',
+    link: 'https://github.com'
+  },
+  {
+    title: 'Simple Sari-Sari Store Mini System',
+    type: 'Economic Platform System',
+    description:
+      'Scalable marketplace with payment processing, inventory management, and automated fulfillment handling 10K+ transactions daily.',
+    stack: ['Laravel', 'MySQL', 'Tailwind'],
+    icon: 'shopping_cart',
+    image: new URL('../assets/assests/project-image/simplesarisari/p8-1.png', import.meta.url).href,
+    previewImages: projectPreviewImages.simplesarisari,
+    author: 'John Mark',
+    role: 'Entry Level Web & System Developer',
+    link: 'https://github.com'
+  },
+  {
+    title: 'Simple Blog Platform',
+    type: 'Economic Platform System',
+    description:
+      'Simple Blog Platform built with Laravel and Tailwind CSS.',
+    stack: ['Laravel', 'MySQL', 'Tailwind'],
+    icon: 'shopping_cart',
+    image: new URL('../assets/assests/project-image/simplebloglaravel/p7-1.png', import.meta.url).href,
+    previewImages: projectPreviewImages.simplebloglaravel,
+    author: 'John Mark',
+    role: 'Entry Level Web & System Developer',
+    link: 'https://github.com'
   }
 ]
 
@@ -138,6 +189,7 @@ const stackIcons = {
   React: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
   PHP: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
   JQuery: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg',
+  Python: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'
 
 }
 
