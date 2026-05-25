@@ -351,10 +351,10 @@ onUnmounted(() => {
           : '0 40px 60px -10px rgba(99, 73, 192, 0.08)'
       }"
     >
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
-        <div class="flex items-center gap-2 font-headline text-xl font-black tracking-tighter text-on-background">
-          <span class="material-symbols-outlined text-[#cbbeff]">terminal</span>
-          <span>SoftArchitect.dev</span>
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-3 py-2 md:px-8 md:py-4">
+        <div class="flex items-center gap-2 font-headline text-lg md:text-xl font-black tracking-tighter text-on-background">
+          <span class="material-symbols-outlined text-sm md:text-base text-[#cbbeff]">terminal</span>
+          <span class="text-sm md:text-base">SoftArchitect.dev</span>
         </div>
         <div class="hidden gap-10 font-headline font-bold tracking-tight md:flex">
           <a 
@@ -393,9 +393,9 @@ onUnmounted(() => {
             Contact
           </a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 md:gap-3">
           <button
-            class="btn-soft rounded-full bg-surface-container-high px-6 py-2 font-headline font-bold text-primary transition-all duration-300 ease-in-out active:opacity-80"
+            class="btn-soft rounded-full bg-surface-container-high px-4 md:px-6 py-1.5 md:py-2 font-headline text-xs md:text-sm font-bold text-primary transition-all duration-300 ease-in-out active:opacity-80"
             type="button"
             @click="goToResume"
           >
@@ -657,7 +657,7 @@ onUnmounted(() => {
 }
 
 .home-main {
-  padding-top: 5rem;
+  padding-top: 3.5rem;
 }
 
 .home-shell {
@@ -1146,7 +1146,7 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   .home-main {
-    padding-top: 4.5rem;
+    padding-top: 3rem;
   }
 
   .hero-stat-card {
