@@ -6,47 +6,65 @@ import profileImage from '../assets/assests/images/profile.png'
 const router = useRouter()
 const isDarkMode = ref(true)
 
-const skills = ['Rust', 'TypeScript', 'Kubernetes', 'Go', 'Next.js', 'PostgreSQL', 'GraphQL', 'Tailwind CSS']
+const skills = ['Git & GitHub', 'HTML5', 'CSS3', 'JavaScript', 'Laravel', 'SQL', 'React', 'Vue.js', 'Tailwind', 'Bootstrap', 'Storybook', 'Oracle SQL']
 
 const experience = [
   {
-    role: 'Principal Software Architect',
-    company: 'Nebula Systems Inc.',
-    period: '2021 - Present',
+    role: 'Software Engineer Intern',
+    company: 'Thy Web Dev Inc.',
+    period: 'Present',
     summary:
-      'Spearheaded the transition to a decentralized microservices architecture serving 2M+ active users and developed a high-performance Rust-based API gateway that reduced latency by 45%.',
+      'Designed and developed comprehensive web applications and server configuration tools with Git integration and deployment processes.',
     points: [
-      'Architected a real-time data ingestion pipeline processing 10TB daily using Kafka and Go.',
-      'Mentored a team of 12 senior developers on cloud-native best practices and domain-driven design.'
+      'Designed and developed a server configuration app with Git and deployment process to manage and monitor DNS subdomains.',
+      'Designed and developed a web-based system for managing internship programs.',
+      'Designed a school portal website for Sherman Hill Integrated School.',
+      'Designed a website for VoteInfo - Candidate & PartyList Information Platform.'
     ]
   },
   {
-    role: 'Lead Full Stack Developer',
-    company: 'Prism Creative Labs',
-    period: '2018 - 2021',
+    role: 'Freelance Developer',
+    company: 'Freelance',
+    period: '2023 - Present',
     summary:
-      'Built and scaled a SaaS platform for creative agencies and standardized a robust GraphQL API interface across products.',
+      'Created system designs and developed various web-based solutions for clients and educational institutions.',
     points: [
-      'Reduced AWS infrastructure costs by 30% through strategic container orchestration.',
-      'Integrated enterprise billing and authentication systems including Stripe and Auth0.'
+      'Created system design for clients (e.g., student projects) for their project requirements.',
+      'Developed local web-based systems for client and school projects.',
+      'Developed student information and grading management system for school_final project.',
+      'Developed interactive Philippine Population Dashboard with datasets and SVG map visualization.'
     ]
   }
 ]
 
 const projects = [
   {
-    title: 'Aether Engine',
-    icon: 'deployed_code',
+    title: 'School Portal System',
+    icon: 'school',
     summary:
-      'A high-concurrency event processing engine built in Rust, capable of handling millions of signals with microsecond latency.',
-    tags: ['#Rust', '#Tokio', '#Wasm']
+      'A comprehensive school management portal for Sherman Hill Integrated School, featuring student management, grading, and information systems.',
+    tags: ['#PHP', '#Laravel', '#MySQL', '#Vue.js']
   },
   {
-    title: 'Void Framework',
-    icon: 'schema',
+    title: 'VoteInfo Platform',
+    icon: 'how_to_vote',
     summary:
-      'A lightweight TypeScript framework for building type-safe edge functions optimized for Vercel and Cloudflare Workers.',
-    tags: ['#TypeScript', '#Zod', '#Node']
+      'A candidate and political partylist information platform designed to provide voters with comprehensive electoral information and candidates details.',
+    tags: ['#JavaScript', '#HTML5', '#CSS3', '#Laravel']
+  },
+  {
+    title: 'Philippine Population Dashboard',
+    icon: 'dashboard',
+    summary:
+      'An interactive dashboard visualizing Philippine population data with datasets and SVG map, providing demographic insights and analytics.',
+    tags: ['#React', '#SVG', '#JavaScript', '#Data Visualization']
+  },
+  {
+    title: 'Git Configuration Manager',
+    icon: 'deployed_code',
+    summary:
+      'A server configuration application for managing DNS subdomains with Git integration and automated deployment processes.',
+    tags: ['#Git', '#Node.js', '#DevOps', '#Linux']
   }
 ]
 
@@ -148,11 +166,12 @@ onMounted(() => {
             </div>
             <div class="space-y-2">
               <h2 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface">John Mark Luste</h2>
-              <p class="font-medium tracking-wide text-primary">Software Developer and Architect</p>
+              <p class="font-medium tracking-wide text-primary">Software Engineer Intern</p>
             </div>
             <p class="text-sm leading-relaxed text-on-surface-variant">
-              Specializing in distributed systems and cloud-native architectures. Bridging the gap between aesthetic
-              precision and technical excellence through etheric syntax.
+              Full-stack web developer with expertise in system design, school management systems, and interactive web applications.
+              Proficient in PHP, Laravel, Vue.js, React, and modern web technologies. Passionate about creating scalable and
+              user-centric solutions.
             </p>
           </section>
 
@@ -161,15 +180,15 @@ onMounted(() => {
             <ul class="space-y-3">
               <li class="flex items-center gap-4 text-sm text-on-surface-variant">
                 <span class="material-symbols-outlined text-lg text-primary">mail</span>
-                architect@void.dev
+                luste.jonhmark19@gmail.com
               </li>
               <li class="flex items-center gap-4 text-sm text-on-surface-variant">
                 <span class="material-symbols-outlined text-lg text-primary">public</span>
-                san francisco, ca
+                Sagay City, Neg. Occ.
               </li>
               <li class="flex items-center gap-4 text-sm text-on-surface-variant">
-                <span class="material-symbols-outlined text-lg text-primary">link</span>
-                github.com/void-architect
+                <span class="material-symbols-outlined text-lg text-primary">call</span>
+                09507791280
               </li>
             </ul>
           </section>
@@ -191,12 +210,12 @@ onMounted(() => {
             <h3 class="text-xs font-label uppercase tracking-[0.2em] text-outline">Education</h3>
             <div class="space-y-4">
               <div>
-                <p class="text-sm font-bold text-on-surface">M.S. Computer Science</p>
-                <p class="text-xs text-on-surface-variant">Stanford University - 2018</p>
+                <p class="text-sm font-bold text-on-surface">Bachelor of Science in Information Technology</p>
+                <p class="text-xs text-on-surface-variant">State University of Northern Negros (SUNN) - 2026</p>
               </div>
               <div>
-                <p class="text-sm font-bold text-on-surface">B.S. Software Engineering</p>
-                <p class="text-xs text-on-surface-variant">MIT - 2016</p>
+                <p class="text-sm font-bold text-on-surface">High School Diploma - With Honors</p>
+                <p class="text-xs text-on-surface-variant">Bato National High School - 2020</p>
               </div>
             </div>
           </section>
