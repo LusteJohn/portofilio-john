@@ -292,7 +292,10 @@ onUnmounted(() => {
       }"
     >
       <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
-        <div class="font-headline text-xl font-black tracking-tighter text-on-background">SoftArchitect.dev</div>
+        <div class="flex items-center gap-2 font-headline text-xl font-black tracking-tighter text-on-background">
+          <span class="material-symbols-outlined text-[#cbbeff]">terminal</span>
+          <span>SoftArchitect.dev</span>
+        </div>
         <div class="hidden gap-10 font-headline font-bold tracking-tight md:flex">
           <a 
             :class="['nav-link', { 'nav-link-active': currentSection === 'home' }]" 
