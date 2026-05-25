@@ -62,14 +62,31 @@
                   </div>
                 </div>
 
-                <!-- CTA Button -->
-                <button
-                  class="w-full rounded-lg bg-primary/90 py-2.5 font-headline text-sm font-bold text-on-primary transition-all hover:bg-primary active:scale-95 flex items-center justify-center gap-2"
-                  type="button"
-                  @click="openModal(project)"
-                >
-                  Check Project Image Preview
-                </button>
+                <!-- CTA Buttons -->
+                <div class="flex gap-2">
+                  <button
+                    class="flex-1 rounded-lg bg-primary/90 py-2.5 font-headline text-sm font-bold text-on-primary transition-all hover:bg-primary active:scale-95 flex items-center justify-center gap-2"
+                    type="button"
+                    @click="openModal(project)"
+                  >
+                    <span class="material-symbols-outlined text-base">visibility</span>
+                    Preview
+                  </button>
+                  <a
+                    v-if="project.github"
+                    :href="project.github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex-1 rounded-lg bg-on-surface-variant/20 py-2.5 font-headline text-sm font-bold text-on-surface transition-all hover:bg-on-surface-variant/30 active:scale-95 flex items-center justify-center gap-2"
+                  >
+                    <img 
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" 
+                      alt="GitHub" 
+                      class="w-5 h-5"
+                    />
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
           </div>
