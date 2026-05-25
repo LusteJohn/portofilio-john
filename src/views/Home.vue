@@ -91,7 +91,8 @@ const projectHighlights = [
     previewImages: projectPreviewImages.agriLearnSchool,
     author: 'John Mark',
     role: 'Entry Level Web & System Developer',
-    link: 'https://github.com'
+    link: 'https://github.com',
+    github: 'https://github.com/yourusername/agrilearn-school'
   },
   {
     title: 'Disaster Relief Distribution Tracking System',
@@ -104,7 +105,8 @@ const projectHighlights = [
     previewImages: projectPreviewImages.disasterRiskPlatform,
     author: 'John Mark',
     role: 'Entry Level Web & System Developer',
-    link: 'https://github.com'
+    link: 'https://github.com',
+    github: 'https://github.com/yourusername/disaster-relief-tracking'
   },
   {
     title: 'InternTrack',
@@ -117,7 +119,8 @@ const projectHighlights = [
     previewImages: projectPreviewImages.internTrack,
     author: 'John Mark',
     role: 'Entry Level Web & System Developer',
-    link: 'https://github.com'
+    link: 'https://github.com',
+    github: 'https://github.com/yourusername/interntrack'
   },
   {
     title: 'School Portal',
@@ -130,7 +133,8 @@ const projectHighlights = [
     previewImages: projectPreviewImages.schoolPortal,
     author: 'John Mark',
     role: 'Entry Level Web & System Developer',
-    link: 'https://github.com'
+    link: 'https://github.com',
+    github: 'https://github.com/yourusername/school-portal'
   },
   {
     title: 'SVPMFS',
@@ -143,7 +147,8 @@ const projectHighlights = [
     previewImages: projectPreviewImages.svpmfs,
     author: 'John Mark',
     role: 'Entry Level Web & System Developer',
-    link: 'https://github.com'
+    link: 'https://github.com',
+    github: 'https://github.com/yourusername/svpmfs'
   },
   {
     title: 'Simple Sari-Sari Store Mini System',
@@ -156,7 +161,8 @@ const projectHighlights = [
     previewImages: projectPreviewImages.simplesarisari,
     author: 'John Mark',
     role: 'Entry Level Web & System Developer',
-    link: 'https://github.com'
+    link: 'https://github.com',
+    github: 'https://github.com/yourusername/sari-sari-store'
   },
   {
     title: 'Simple Blog Platform',
@@ -169,7 +175,8 @@ const projectHighlights = [
     previewImages: projectPreviewImages.simplebloglaravel,
     author: 'John Mark',
     role: 'Entry Level Web & System Developer',
-    link: 'https://github.com'
+    link: 'https://github.com',
+    github: 'https://github.com/yourusername/simple-blog-laravel'
   }
 ]
 
@@ -189,7 +196,8 @@ const stackIcons = {
   React: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
   PHP: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
   JQuery: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg',
-  Python: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'
+  Python: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+  github: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg'
 
 }
 
