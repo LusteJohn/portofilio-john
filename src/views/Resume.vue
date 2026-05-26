@@ -423,12 +423,20 @@ onMounted(() => {
 }
 
 .theme-light .header-action-btn {
-  color: #4a2c8a;
+  color: #201d18;
 }
 
 .theme-light .header-action-btn.bg-gradient-to-br {
   background: linear-gradient(135deg, #5b46b6 0%, #2f6fa3 100%) !important;
   color: #f4f0ff !important;
+}
+
+.theme-light :deep(.material-symbols-outlined) {
+  color: #6349c0 !important;
+}
+
+.theme-light h1 {
+  color: #201d18 !important;
 }
 
 .theme-light .no-print {
