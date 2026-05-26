@@ -2,6 +2,21 @@
 import { onMounted, ref } from 'vue'
 
 const techStackInView = ref(false)
+const hoveredCategory = ref(null)
+let collapseTimeout = null
+
+const handleCategoryEnter = (categoryIdx) => {
+  if (collapseTimeout) {
+    clearTimeout(collapseTimeout)
+  }
+  hoveredCategory.value = categoryIdx
+}
+
+const handleSectionLeave = () => {
+  collapseTimeout = setTimeout(() => {
+    hoveredCategory.value = null
+  }, 300)
+}
 
 const toolCategories = [
   {
@@ -160,14 +175,35 @@ onMounted(() => {
       </h3>
     </div>
 
-    <div class="mt-10 space-y-10">
-      <section v-for="(category, categoryIdx) in toolCategories" :key="category.title" class="tool-section">
-        <div class="mb-4 flex items-center gap-3">
-          <span class="h-2.5 w-2.5 rounded-full bg-primary"></span>
-          <h4 class="text-sm font-bold uppercase tracking-[0.16em] text-on-surface">{{ category.title }}</h4>
+    <div class="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-3">
+      <section 
+        v-for="(category, categoryIdx) in toolCategories" 
+        :key="category.title" 
+        class="tool-section"
+        @mouseenter="handleCategoryEnter(categoryIdx)"
+        @mouseleave="handleSectionLeave"
+      >
+        <div 
+          class="mb-4 flex items-center gap-3 cursor-pointer transition-all duration-300"
+        >
+          <span 
+            :class="['h-2.5 w-2.5 rounded-full bg-primary transition-all duration-300', {
+              'scale-150': hoveredCategory === categoryIdx
+            }]"
+          ></span>
+          <h4 
+            :class="['text-sm font-bold uppercase tracking-[0.16em] text-on-surface transition-all duration-300', {
+              'text-primary': hoveredCategory === categoryIdx
+            }]"
+          >
+            {{ category.title }}
+          </h4>
         </div>
 
-        <div class="tools-grid grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <div 
+          v-if="hoveredCategory === categoryIdx"
+          class="tools-grid grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-2 animate-fadeIn"
+        >
           <article
             v-for="(tool, itemIdx) in category.tools"
             :key="tool.name"
@@ -175,7 +211,7 @@ onMounted(() => {
             :style="{
               '--tool-accent': tool.accent,
               '--tool-accent-soft': tool.accentSoft,
-              animationDelay: `${(categoryIdx * 4 + itemIdx) * 0.06}s`
+              animationDelay: `${itemIdx * 0.06}s`
             }"
             class="tool-card rounded-3xl border border-outline-variant/10 bg-surface-container-high p-4 text-center"
           >
@@ -209,6 +245,19 @@ onMounted(() => {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .tech-item-animate {

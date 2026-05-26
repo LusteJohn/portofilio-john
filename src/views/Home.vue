@@ -21,6 +21,33 @@ const heroRoles = [
   }
 ]
 
+const techFocusCategories = [
+  {
+    title: 'API Architecture',
+    icon: 'api',
+    items: [
+      { name: 'RESTful Design', description: 'Building robust REST layers that bridge diverse data sources with ironclad security protocols.' },
+      { name: 'GraphQL Integration', description: 'Efficient query language implementation for flexible data fetching and optimization.' }
+    ]
+  },
+  {
+    title: 'Database Design',
+    icon: 'database',
+    items: [
+      { name: 'Complex Queries', description: 'Engineering sophisticated management interfaces that handle complex data relations without compromising on performance.' },
+      { name: 'Data Optimization', description: 'Advanced indexing and query optimization for high-performance database operations.' }
+    ]
+  },
+  {
+    title: 'System Architecture',
+    icon: 'architecture',
+    items: [
+      { name: 'Scalability', description: 'Designing systems that grow with your business needs and handle increasing loads efficiently.' },
+      { name: 'Clean Code', description: 'Implementing best practices and design patterns for maintainable, production-ready solutions.' }
+    ]
+  }
+]
+
 const heroStats = [
   { label: 'Years Building', value: '2+' },
   { label: 'Systems, Web Applications, and Websites', value: '10+' },
@@ -207,12 +234,27 @@ const typedRole = ref('')
 const activeRoleIndex = ref(0)
 const isDarkMode = ref(true)
 const currentSection = ref('home')
+const hoveredTechFocus = ref(null)
 const router = useRouter()
 
 let isDeleting = false
 let charIndex = 0
 let typingTimer = null
 let sectionObserver = null
+let techFocusCollapseTimeout = null
+
+const handleTechFocusEnter = (categoryIdx) => {
+  if (techFocusCollapseTimeout) {
+    clearTimeout(techFocusCollapseTimeout)
+  }
+  hoveredTechFocus.value = categoryIdx
+}
+
+const handleTechFocusLeave = () => {
+  techFocusCollapseTimeout = setTimeout(() => {
+    hoveredTechFocus.value = null
+  }, 300)
+}
 
 const heroDescription = computed(() => heroRoles[activeRoleIndex.value].description)
 
@@ -523,30 +565,52 @@ onUnmounted(() => {
                 and precision.
               </p>
             </div>
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div class="feature-card flex gap-4 rounded-2xl border border-outline-variant/10 bg-surface-container-low/30 p-5">
-                <div class="mt-1 shrink-0">
-                  <span class="material-symbols-outlined text-primary">api</span>
+            <div class="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-3">
+              <div 
+                v-for="(category, categoryIdx) in techFocusCategories" 
+                :key="category.title" 
+                class="tech-focus-section"
+                @mouseenter="handleTechFocusEnter(categoryIdx)"
+                @mouseleave="handleTechFocusLeave"
+              >
+                <div 
+                  class="mb-4 flex items-center gap-3 cursor-pointer transition-all duration-300"
+                >
+                  <span 
+                    :class="['h-2.5 w-2.5 rounded-full bg-primary transition-all duration-300', {
+                      'scale-150': hoveredTechFocus === categoryIdx
+                    }]"
+                  ></span>
+                  <h4 
+                    :class="['text-sm font-bold uppercase tracking-[0.16em] text-on-surface transition-all duration-300', {
+                      'text-primary': hoveredTechFocus === categoryIdx
+                    }]"
+                  >
+                    {{ category.title }}
+                  </h4>
                 </div>
-                <div>
-                  <h4 class="mb-1 font-headline text-xl font-bold text-on-surface">Deep API Integrations</h4>
-                  <p class="text-on-surface-variant">
-                    Building robust REST layers that bridge diverse data sources with ironclad security
-                    protocols.
-                  </p>
-                </div>
-              </div>
-              <div class="feature-card flex gap-4 rounded-2xl border border-outline-variant/10 bg-surface-container-low/30 p-5">
-                <div class="mt-1 shrink-0">
-                  <span class="material-symbols-outlined text-primary">database</span>
-                </div>
-                <div>
-                  <h4 class="mb-1 font-headline text-xl font-bold text-on-surface">Advanced CRUD Systems</h4>
-                  <p class="text-on-surface-variant">
-                    Engineering sophisticated management interfaces that handle complex data relations without
-                    compromising on performance.
-                  </p>
-                </div>
+
+                <Transition name="fade-collapse">
+                  <div 
+                    v-if="hoveredTechFocus === categoryIdx"
+                    class="tech-focus-items grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-2 animate-fadeIn"
+                  >
+                    <article
+                      v-for="(item, itemIdx) in category.items"
+                      :key="item.name"
+                      :style="{ animationDelay: `${itemIdx * 0.06}s` }"
+                      class="tech-focus-card rounded-2xl border border-outline-variant/10 bg-surface-container-high p-4"
+                    >
+                      <div class="flex items-start gap-3 mb-3">
+                        <span class="material-symbols-outlined text-lg text-primary flex-shrink-0">{{ category.icon }}</span>
+                        <div>
+                          <p class="text-xs font-bold uppercase tracking-[0.09em] text-on-surface">{{ item.name }}</p>
+                          <p class="text-[11px] text-on-surface-variant mt-1">{{ item.description }}</p>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </Transition>
               </div>
             </div>
           </section>
@@ -763,6 +827,39 @@ onUnmounted(() => {
   transform: translateY(-4px);
   border-color: rgba(203, 190, 255, 0.35);
   background-color: rgba(203, 190, 255, 0.06);
+}
+
+.tech-focus-section {
+  position: relative;
+}
+
+.tech-focus-card {
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  box-shadow: 0 8px 24px -22px rgba(0, 0, 0, 0.65);
+  animation: zoom-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.tech-focus-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(203, 190, 255, 0.48);
+  box-shadow: 0 20px 42px -28px rgba(203, 190, 255, 0.65);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-collapse-enter-active {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.fade-collapse-leave-active {
+  animation: fadeOut 0.3s ease-in-out;
 }
 
 .contact-shell {
@@ -1020,6 +1117,16 @@ onUnmounted(() => {
 .theme-light .feature-card:hover {
   border-color: rgba(91, 70, 182, 0.34);
   background-color: rgba(91, 70, 182, 0.08);
+}
+
+.theme-light .tech-focus-card {
+  background: rgba(249, 247, 243, 0.95);
+  border-color: rgba(91, 85, 76, 0.14);
+}
+
+.theme-light .tech-focus-card:hover {
+  border-color: rgba(91, 70, 182, 0.48);
+  box-shadow: 0 20px 42px -28px rgba(91, 70, 182, 0.65);
 }
 
 .theme-light .social-pill:hover {
