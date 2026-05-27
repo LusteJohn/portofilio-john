@@ -242,6 +242,7 @@ let charIndex = 0
 let typingTimer = null
 let sectionObserver = null
 let techFocusCollapseTimeout = null
+let revealObserver = null
 
 const handleTechFocusEnter = (categoryIdx) => {
   if (techFocusCollapseTimeout) {
@@ -359,11 +360,70 @@ const runTyping = () => {
   typingTimer = setTimeout(runTyping, isDeleting ? DELETE_SPEED : TYPE_SPEED)
 }
 
+const initRevealObserver = () => {
+  const root = document.querySelector('.home-shell')
+  if (!root) {
+    return
+  }
+
+  const revealTargets = root.querySelectorAll(
+    'img, h1, h2, h3, h4, h5, h6, p, li, a, button, span'
+  )
+
+  if (!revealTargets.length) {
+    return
+  }
+
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          revealObserver?.unobserve(entry.target)
+        }
+      })
+    },
+    {
+      threshold: 0.15,
+      rootMargin: '0px 0px -10% 0px'
+    }
+  )
+
+  revealTargets.forEach((element) => {
+    if (element.classList.contains('material-symbols-outlined')) {
+      return
+    }
+
+    if (
+      element.tagName === 'SPAN' &&
+      element.closest('h1, h2, h3, h4, h5, h6, p, li, a, button')
+    ) {
+      return
+    }
+
+    if (element.closest('.home-navbar')) {
+      return
+    }
+
+    if (element.closest('.modal-overlay')) {
+      return
+    }
+
+    if (element.dataset.noReveal === 'true') {
+      return
+    }
+
+    element.classList.add('scroll-reveal')
+    revealObserver.observe(element)
+  })
+}
+
 onMounted(() => {
   const savedTheme = localStorage.getItem('theme-mode')
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
   applyTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : prefersDark ? 'dark' : 'light')
   initSectionObserver()
+  initRevealObserver()
   runTyping()
 })
 
@@ -374,6 +434,10 @@ onUnmounted(() => {
 
   if (sectionObserver) {
     sectionObserver.disconnect()
+  }
+
+  if (revealObserver) {
+    revealObserver.disconnect()
   }
 })
 </script>
