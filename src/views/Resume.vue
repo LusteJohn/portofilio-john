@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import profileImage from '../assets/assests/images/profile.png'
+import ContactSection from '../components/ContactSection.vue'
 
 const router = useRouter()
 const isDarkMode = ref(true)
@@ -302,6 +303,8 @@ onMounted(() => {
               </div>
             </div>
           </section>
+
+          <ContactSection />
         </aside>
 
         <div class="space-y-16 lg:w-2/3">
