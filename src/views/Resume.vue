@@ -6,33 +6,29 @@ import profileImage from '../assets/assests/images/profile.png'
 const router = useRouter()
 const isDarkMode = ref(true)
 
-const skills = ['Git & GitHub', 'HTML5', 'CSS3', 'JavaScript', 'Laravel', 'SQL', 'React', 'Vue.js', 'Tailwind', 'Bootstrap', 'Storybook', 'Oracle SQL', 'PHP']
-
 const experience = [
   {
     role: 'Software Engineer Intern',
     company: 'Thy Web Dev Inc.',
     period: 'Present',
     summary:
-      'Designed and developed comprehensive web applications and server configuration tools with Git integration and deployment processes.',
+      'Designed and developed a server configuration dashboard using the Vultr API, automating DNS subdomain management and integrating Git-based deployment workflows to streamline server monitoring.',
     points: [
-      'Designed and developed a server configuration app with Git and deployment process to manage and monitor DNS subdomains.',
-      'Designed and developed a web-based system for managing internship programs.',
-      'Designed a school portal website for Sherman Hill Integrated School.',
-      'Designed a website for VoteInfo - Candidate & PartyList Information Platform.'
+      'Architected and developed a web-based system to track internship documentation and compliance, utilizing PHP to improve administrative efficiency for student records.',
+      'Designed a responsive school portal for School, enhancing institutional communication and accessibility for students and faculty.',
+      'Developed a candidate and party-list information platform, prioritizing user experience and data accessibility to ensure transparent information dissemination for voters.'
     ]
   },
   {
     role: 'Freelance Developer',
     company: 'Freelance',
-    period: '2023 - Present',
+    period: '2023 – Present',
     summary:
-      'Created system designs and developed various web-based solutions for clients and educational institutions.',
+      'Collaborated with clients to translate project requirements into comprehensive system designs, including database schema development and process mapping.',
     points: [
-      'Created system design for clients (e.g., student projects) for their project requirements.',
-      'Developed local web-based systems for client and school projects.',
-      'Developed student information and grading management system for school_final project.',
-      'Developed interactive Philippine Population Dashboard with datasets and SVG map visualization.'
+      'Engineered scalable local web-based systems for academic and client-specific requirements, focusing on intuitive interfaces and optimized database performance.',
+      'Developed a centralized management system for academic records, automating grading processes and data retrieval to streamline school administrative tasks.',
+      'Built an interactive Philippine Population Dashboard utilizing real-time datasets and scalable vector graphics (SVG) to provide accessible and engaging data insights.'
     ]
   }
 ]
@@ -169,9 +165,9 @@ onMounted(() => {
               <p class="font-medium tracking-wide text-primary">Entry Level Web & System Developer</p>
             </div>
             <p class="text-sm leading-relaxed text-on-surface-variant">
-              Entry Level Web & System Developer with expertise in system design, school management systems, and interactive web applications.
-              Proficient in PHP, Laravel, Vue.js, React, and modern web technologies. Passionate about creating scalable and
-              user-centric solutions.
+              Entry Level Web & System Developer with expertise in system design, school management systems,
+              and interactive web applications. Proficient in PHP, Laravel, Vue.js, React, and modern web
+              technologies. Passionate about creating scalable and user-centric solutions.
             </p>
           </section>
 
@@ -180,29 +176,82 @@ onMounted(() => {
             <ul class="space-y-3">
               <li class="flex items-center gap-4 text-sm text-on-surface-variant">
                 <span class="material-symbols-outlined text-lg text-primary">mail</span>
-                luste.jonhmark19@gmail.com
+                luste.johnmark19@gmail.com
               </li>
               <li class="flex items-center gap-4 text-sm text-on-surface-variant">
                 <span class="material-symbols-outlined text-lg text-primary">public</span>
-                Sagay City, Neg. Occ.
+                Sagay City, Negros Occidental
               </li>
               <li class="flex items-center gap-4 text-sm text-on-surface-variant">
                 <span class="material-symbols-outlined text-lg text-primary">call</span>
-                09507791280
+                +639507791280
               </li>
             </ul>
           </section>
 
           <section class="space-y-6">
             <h3 class="text-xs font-label uppercase tracking-[0.2em] text-outline">Technical Arsenal</h3>
-            <div class="flex flex-wrap gap-2">
-              <span
-                v-for="skill in skills"
-                :key="skill"
-                class="rounded-lg border border-outline-variant/20 bg-surface-container-high px-3 py-1 text-xs font-medium text-primary"
-              >
-                {{ skill }}
-              </span>
+            <div class="space-y-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Programming</p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="skill in ['PHP', 'JavaScript', 'SQL']"
+                    :key="skill"
+                    class="rounded-lg border border-outline-variant/20 bg-surface-container-high px-3 py-1 text-xs font-medium text-primary"
+                  >
+                    {{ skill }}
+                  </span>
+                </div>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Web Development</p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="skill in ['HTML5', 'CSS3', 'Bootstrap', 'AJAX']"
+                    :key="skill"
+                    class="rounded-lg border border-outline-variant/20 bg-surface-container-high px-3 py-1 text-xs font-medium text-primary"
+                  >
+                    {{ skill }}
+                  </span>
+                </div>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Frameworks & Libraries</p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="skill in ['Laravel', 'React', 'Vue.js', 'Tailwind', 'Bootstrap']"
+                    :key="skill"
+                    class="rounded-lg border border-outline-variant/20 bg-surface-container-high px-3 py-1 text-xs font-medium text-primary"
+                  >
+                    {{ skill }}
+                  </span>
+                </div>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Database Management</p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="skill in ['MySQL / MariaDB', 'Firebase']"
+                    :key="skill"
+                    class="rounded-lg border border-outline-variant/20 bg-surface-container-high px-3 py-1 text-xs font-medium text-primary"
+                  >
+                    {{ skill }}
+                  </span>
+                </div>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Tools</p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="skill in ['Git/GitHub', 'Composer', 'XAMPP', 'VS Code']"
+                    :key="skill"
+                    class="rounded-lg border border-outline-variant/20 bg-surface-container-high px-3 py-1 text-xs font-medium text-primary"
+                  >
+                    {{ skill }}
+                  </span>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -211,15 +260,45 @@ onMounted(() => {
             <div class="space-y-4">
               <div>
                 <p class="text-sm font-bold text-on-surface">Bachelor of Science in Information Technology</p>
-                <p class="text-xs text-on-surface-variant">State University of Northern Negros (SUNN) - 2026</p>
+                <p class="text-xs text-on-surface-variant">State University of Northern Negros (SUNN) - Old Sagay Campus - Brgy. Old Sagay, Sagay City, Negros Occidental - 2026</p>
               </div>
               <div>
-                <p class="text-sm font-bold text-on-surface">High School Diploma - With Honors</p>
-                <p class="text-xs text-on-surface-variant">Bato National High School - 2020</p>
+                <p class="text-sm font-bold text-on-surface">With Honors - High School Diploma</p>
+                <p class="text-xs text-on-surface-variant">Bato National High School - Brgy. Bato, Sagay City, Negros Occidental - 2020</p>
               </div>
               <div>
-                <p class="text-sm font-bold text-on-surface">Elementary School Diploma - With Honors</p>
-                <p class="text-xs text-on-surface-variant">Sherman Hill Integrated School - 2017</p>
+                <p class="text-sm font-bold text-on-surface">With Honors - Elementary School Diploma</p>
+                <p class="text-xs text-on-surface-variant">Sherman Hill Integrated School - Prk. Silica, Brgy. Baviera, Sagay City, Negros Occidental - 2017</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="space-y-4 rounded-xl border border-outline-variant/10 bg-surface-container-low p-6">
+            <h3 class="text-xs font-label uppercase tracking-[0.2em] text-outline">Additional Information</h3>
+            <div class="space-y-4">
+              <div>
+                <p class="text-sm font-bold text-on-surface">Soft Skills</p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="skill in ['Communication Skills', 'Time Management', 'Creativity', 'Collaboration']"
+                    :key="skill"
+                    class="rounded-lg border border-outline-variant/20 bg-surface-container-high px-3 py-1 text-xs font-medium text-primary"
+                  >
+                    {{ skill }}
+                  </span>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-on-surface">Language</p>
+                <p class="text-xs text-on-surface-variant">English, Filipino</p>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-on-surface">Certification</p>
+                <p class="text-xs text-on-surface-variant">University Week Technovation Pitch Exhibit and Competition, Educational Tour, and OJT Completion Certificate – Thy Web Development Inc.</p>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-on-surface">Awards/Activities</p>
+                <p class="text-xs text-on-surface-variant">3rd Place Technovation Competition</p>
               </div>
             </div>
           </section>
@@ -337,17 +416,8 @@ onMounted(() => {
       <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
         <div class="text-sm font-medium uppercase tracking-wide text-on-surface-variant">&copy; 2024 Digital Architect. Built with precision.</div>
         <div class="flex gap-8">
-          <a class="text-sm font-medium uppercase tracking-wide text-on-surface-variant transition-colors duration-200 hover:text-primary" href="#"
-            >Github</a
-          >
-          <a class="text-sm font-medium uppercase tracking-wide text-on-surface-variant transition-colors duration-200 hover:text-primary" href="#"
-            >LinkedIn</a
-          >
-          <a class="text-sm font-medium uppercase tracking-wide text-on-surface-variant transition-colors duration-200 hover:text-primary" href="#"
-            >Twitter</a
-          >
-          <a class="text-sm font-medium uppercase tracking-wide text-on-surface-variant transition-colors duration-200 hover:text-primary" href="#"
-            >Layers</a
+          <a class="text-sm font-medium uppercase tracking-wide text-on-surface-variant transition-colors duration-200 hover:text-primary" href="https://portofilio-john-2i1q.vercel.app"
+            >portofilio-john-2i1q.vercel.app</a
           >
         </div>
       </div>
