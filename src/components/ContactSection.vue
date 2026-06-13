@@ -10,10 +10,12 @@ const form = ref({
 
 const isSubmitting = ref(false)
 const submitStatus = ref(null)
+const submitMessage = ref('')
 
 const submitForm = async () => {
   isSubmitting.value = true
   submitStatus.value = null
+  submitMessage.value = ''
 
   try {
     const response = await fetch('/api/contact', {
@@ -25,12 +27,15 @@ const submitForm = async () => {
     const result = await response.json()
     if (result.success) {
       submitStatus.value = 'success'
+      submitMessage.value = 'Message sent successfully!'
       form.value = { name: '', email: '', subject: '', message: '' }
     } else {
       submitStatus.value = 'error'
+      submitMessage.value = result.error || 'Failed to send. Please try again.'
     }
   } catch (error) {
     submitStatus.value = 'error'
+    submitMessage.value = error.message || 'Failed to send. Please try again.'
   } finally {
     isSubmitting.value = false
   }
@@ -79,8 +84,8 @@ const submitForm = async () => {
         <span class="material-symbols-outlined text-[14px]">{{ isSubmitting ? 'send' : 'send' }}</span>
         <span>{{ isSubmitting ? 'Sending...' : 'Send Message' }}</span>
       </button>
-      <p v-if="submitStatus === 'success'" class="text-xs text-primary">Message sent successfully!</p>
-      <p v-if="submitStatus === 'error'" class="text-xs text-error">Failed to send. Please try again.</p>
+      <p v-if="submitStatus === 'success'" class="text-xs text-primary">{{ submitMessage }}</p>
+      <p v-if="submitStatus === 'error'" class="text-xs text-error">{{ submitMessage }}</p>
     </form>
   </section>
 </template>
