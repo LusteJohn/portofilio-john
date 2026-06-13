@@ -27,8 +27,9 @@ export default async function handler(req, res) {
       html: `<p><strong>From:</strong> ${name} (${email})</p><p>${message}</p>`
     })
 
-    res.json({ success: true })
+    res.status(200).json({ success: true })
   } catch (error) {
-    res.status(500).json({ error: 'Failed to send email' })
+    console.error('Email send failed:', error)
+    res.status(500).json({ error: error.message || 'Failed to send email' })
   }
 }
