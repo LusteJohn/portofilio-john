@@ -4,26 +4,18 @@ import { ref } from 'vue'
 const experiences = [
   {
     id: 1,
-    year: '2021 - PRESENT',
-    title: 'Principal Architect',
-    company: 'Digital Horizon Systems',
-    description: 'Leading the technical strategy for a suite of enterprise SaaS products. Focused on transition to microservices and Kubernetes orchestration.',
+    year: 'PRESENT',
+    title: 'Software Engineer Intern',
+    company: 'Thy Web Dev Inc.',
+    description: 'Designed and developed a server configuration dashboard using the Vultr API, automating DNS subdomain management and integrating Git-based deployment workflows to streamline server monitoring. Architected and developed a web-based system to track internship documentation and compliance, utilizing PHP to improve administrative efficiency for student records. Designed a responsive school portal for School, enhancing institutional communication and accessibility for students and faculty. Developed a candidate and party-list information platform, prioritizing user experience and data accessibility to ensure transparent information dissemination for voters.',
     isActive: true
   },
   {
     id: 2,
-    year: '2018 - 2021',
-    title: 'Senior Full Stack Developer',
-    company: 'Lumina Creative Lab',
-    description: 'Developed high-end editorial platforms for global fashion brands. Optimized frontend performance by 40% using advanced Vue.js patterns.',
-    isActive: false
-  },
-  {
-    id: 3,
-    year: '2015 - 2018',
-    title: 'Junior Web Engineer',
-    company: 'StartUp Foundry',
-    description: 'Built MVPs for early-stage startups using Laravel and jQuery. Mastered the art of rapid prototyping and deployment pipelines.',
+    year: '2023 – PRESENT',
+    title: 'Freelance Developer',
+    company: 'Freelance',
+    description: 'Collaborated with clients to translate project requirements into comprehensive system designs, including database schema development and process mapping. Engineered scalable local web-based systems for academic and client-specific requirements, focusing on intuitive interfaces and optimized database performance. Developed a centralized management system for academic records, automating grading processes and data retrieval to streamline school administrative tasks. Built an interactive Philippine Population Dashboard utilizing real-time datasets and scalable vector graphics (SVG) to provide accessible and engaging data insights.',
     isActive: false
   }
 ]
