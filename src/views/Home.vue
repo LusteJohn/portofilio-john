@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import WorkSection from '../components/WorkSection.vue'
 import TechStack from '../components/TechStack.vue'
 import ProjectsSection from '../components/ProjectsSection.vue'
+import ContactSection from '../components/ContactSection.vue'
 import profileImage from '../assets/assests/images/profile.png'
 
 const heroRoles = [
@@ -694,60 +695,12 @@ onUnmounted(() => {
       <WorkSection />
 
       <section id="contact" class="px-4 py-32 md:px-8">
-        <div class="mx-auto max-w-3xl text-center">
+        <div class="mx-auto max-w-3xl">
           <h2 class="mb-6 font-headline text-5xl font-extrabold">Let's build the future.</h2>
           <p class="mb-12 text-lg text-on-surface-variant">
             Currently accepting new projects and architectural consultations for Q3 2024.
           </p>
-          <form class="contact-shell space-y-6 rounded-3xl border border-outline-variant/10 bg-surface-container-low/50 p-6 text-left backdrop-blur-sm md:p-10">
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div class="space-y-2">
-                <label class="ml-2 text-xs uppercase tracking-widest text-on-surface-variant">Name</label>
-                <input
-                  class="w-full rounded-xl border border-outline-variant/20 bg-surface-container-lowest px-6 py-4 text-on-surface transition-all focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/20"
-                  placeholder="John Doe"
-                  type="text"
-                />
-              </div>
-              <div class="space-y-2">
-                <label class="ml-2 text-xs uppercase tracking-widest text-on-surface-variant">Email</label>
-                <input
-                  class="w-full rounded-xl border border-outline-variant/20 bg-surface-container-lowest px-6 py-4 text-on-surface transition-all focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/20"
-                  placeholder="john@example.com"
-                  type="email"
-                />
-              </div>
-            </div>
-            <div class="space-y-2">
-              <label class="ml-2 text-xs uppercase tracking-widest text-on-surface-variant">Message</label>
-              <textarea
-                class="w-full rounded-xl border border-outline-variant/20 bg-surface-container-lowest px-6 py-4 text-on-surface transition-all focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/20"
-                placeholder="Tell me about your vision..."
-                rows="5"
-              ></textarea>
-            </div>
-            <button
-              class="btn-gradient pulse-glow w-full rounded-xl py-5 font-headline text-lg font-bold text-on-surface shadow-xl shadow-primary/10 transition-transform hover:scale-[1.01] dark:text-on-primary"
-              type="button"
-            >
-              Send Message
-            </button>
-          </form>
-
-          <div class="mt-16 flex flex-wrap justify-center gap-4 md:gap-6">
-            <a class="social-pill group flex items-center gap-2 rounded-full border border-outline-variant/15 px-5 py-3 text-on-surface-variant transition-colors hover:text-primary" href="#">
-              <span class="material-symbols-outlined">alternate_email</span>
-              <span class="font-bold">Twitter</span>
-            </a>
-            <a class="social-pill group flex items-center gap-2 rounded-full border border-outline-variant/15 px-5 py-3 text-on-surface-variant transition-colors hover:text-primary" href="#">
-              <span class="material-symbols-outlined">link</span>
-              <span class="font-bold">LinkedIn</span>
-            </a>
-            <a class="social-pill group flex items-center gap-2 rounded-full border border-outline-variant/15 px-5 py-3 text-on-surface-variant transition-colors hover:text-primary" href="#">
-              <span class="material-symbols-outlined">code</span>
-              <span class="font-bold">Github</span>
-            </a>
-          </div>
+          <ContactSection />
         </div>
       </section>
     </main>
