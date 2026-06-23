@@ -1,7 +1,9 @@
 {
   "functions": {
-    "api/contact.js": {
+    "api/contact.mjs": {
       "maxDuration": 10
     }
-  }
+  },
+  "outputDirectory": "dist",
+  "buildCommand": "npm run build"
 }

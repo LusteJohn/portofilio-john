@@ -85,7 +85,7 @@ const submitForm = async () => {
         <span>{{ isSubmitting ? 'Sending...' : 'Send Message' }}</span>
       </button>
       <p v-if="submitStatus === 'success'" class="text-xs text-primary">{{ submitMessage }}</p>
-      <p v-if="submitStatus === 'error'" class="text-xs text-error">{{ submitMessage }}</p>
+      <p v-if="submitStatus === 'error'" class="text-xs text-[#ffb4ab]">{{ submitMessage }}</p>
     </form>
   </section>
 </template>
