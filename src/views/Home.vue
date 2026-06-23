@@ -153,7 +153,7 @@ const projectHighlights = [
     title: 'School Portal',
     type: 'Educational Institution Website',
     description:
-      'Scalable marketplace with payment processing, inventory management, and automated fulfillment handling 10K+ transactions daily.',
+      'This project involves the development of a dynamic School Portal designed to streamline institutional communications and information dissemination. The system empowers administrators to manage website content, publish real-time news and announcements, and maintain an accurate, up-to-date catalog of academic courses.',
     stack: ['Laravel', 'Tailwind', 'PostgreSQL'],
     icon: 'shopping_cart',
     image: new URL('../assets/assests/project-image/school-portal/p4-1.png', import.meta.url).href,
@@ -181,7 +181,7 @@ const projectHighlights = [
     title: 'Simple Sari-Sari Store Mini System',
     type: 'Economic Platform System',
     description:
-      'Scalable marketplace with payment processing, inventory management, and automated fulfillment handling 10K+ transactions daily.',
+      'This project is a streamlined Sari-Sari Store Management System engineered to digitalize small-scale retail operations. It simplifies the tracking of product inventory, "pabili" (point-of-sale) transactions, and "utang" (credit) management. Built with a focus on ease-of-use and reliability, this system helps store owners maintain better financial records and inventory control.',
     stack: ['Laravel', 'MySQL', 'Tailwind'],
     icon: 'shopping_cart',
     image: new URL('../assets/assests/project-image/simplesarisari/p8-1.png', import.meta.url).href,
