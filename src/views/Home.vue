@@ -205,6 +205,20 @@ const projectHighlights = [
     role: 'Entry Level Web & System Developer',
     link: 'https://github.com',
     github: 'https://github.com/yourusername/simple-blog-laravel'
+  },
+  {
+    title: 'Student Grade Management System',
+    type: 'Educational Platform System',
+    description:
+      'A simple student grade management system built with Laravel and Tailwind CSS.',
+    stack: ['Laravel', 'MySQL', 'Tailwind'],
+    icon: 'shopping_cart',
+    image: new URL('../assets/assests/project-image/SGMS/p1-2.png', import.meta.url).href,
+    previewImages: projectPreviewImages.sgms,
+    author: 'John Mark',
+    role: 'Entry Level Web & System Developer',
+    link: 'https://github.com',
+    github: 'https://github.com/yourusername/simple-blog-laravel'
   }
 ]
 
