@@ -28,7 +28,6 @@ const techFocusCategories = [
     icon: 'api',
     items: [
       { name: 'RESTful Design', description: 'Building robust REST layers that bridge diverse data sources with ironclad security protocols.' },
-      { name: 'GraphQL Integration', description: 'Efficient query language implementation for flexible data fetching and optimization.' }
     ]
   },
   {
@@ -104,6 +103,13 @@ const projectPreviewImages = {
     'p7-2.png',
     'p7-3.png',
     'p7-4.png'
+  ]),
+  organicagricultureapp: buildPreviewImages('organicagricultureapp', [
+    'pic1.jpg',
+    'pic2.jpg',
+    'pic3.jpg',
+    'pic4.jpg',
+    'pic5.jpg',
   ])
 }
 
@@ -219,6 +225,20 @@ const projectHighlights = [
     role: 'Entry Level Web & System Developer',
     link: 'https://github.com',
     github: 'https://github.com/yourusername/simple-blog-laravel'
+  },
+  {
+    title: 'Organic Agriculture App',
+    type: 'Educational Platform System',
+    description:
+      'Developed an offline-first Android learning app for Organic Agriculture Production using React Native, Expo, and TypeScript. Implemented SQLite local storage for offline access to lessons, quizzes, and educational content.',
+    stack: ['React Native', 'Expo', 'TypeScript', 'SQLite'],
+    icon: 'shopping_cart',
+    image: new URL('../assets/assests/project-image/organicagricultureapp/pic1.jpg', import.meta.url).href,
+    previewImages: projectPreviewImages.organicagricultureapp,
+    author: 'John Mark',
+    role: 'Entry Level Web & System Developer',
+    link: 'https://github.com',
+    github: 'https://github.com/yourusername/simple-blog-laravel'
   }
 ]
 
@@ -239,7 +259,9 @@ const stackIcons = {
   PHP: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
   JQuery: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg',
   Python: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
-  github: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg'
+  github: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+  'React Native': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+  Expo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
 
 }
 
