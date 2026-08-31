@@ -83,6 +83,15 @@ const toolCategories = [
         accentSoft: 'rgba(37, 99, 235, 0.22)'
       },
       {
+        name: 'React Native + Expo',
+        mark: 'RN',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg',
+        score: 75,
+        focus: 'Cross-Platform Mobile',
+        accent: '#000020',
+        accentSoft: 'rgba(0, 0, 32, 0.22)'
+      },
+      {
         name: 'Storybook',
         mark: 'Sb',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/storybook/storybook-original.svg',

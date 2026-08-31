@@ -17,6 +17,14 @@ const experiences = [
     company: 'Freelance',
     description: 'Collaborated with clients to translate project requirements into comprehensive system designs, including database schema development and process mapping. Engineered scalable local web-based systems for academic and client-specific requirements, focusing on intuitive interfaces and optimized database performance. Developed a centralized management system for academic records, automating grading processes and data retrieval to streamline school administrative tasks. Built an interactive Philippine Population Dashboard utilizing real-time datasets and scalable vector graphics (SVG) to provide accessible and engaging data insights.',
     isActive: false
+  },
+  {
+    id: 3,
+    year: 'PRESENT',
+    title: 'Mobile App Developer',
+    company: 'first-offline app',
+    description: 'Developing and maintaining mobile applications with a focus on offline-first functionality, ensuring seamless user experiences without constant internet connectivity. Implementing robust local data storage, synchronization strategies, and responsive UI components tailored for mobile platforms.',
+    isActive: true
   }
 ]
 

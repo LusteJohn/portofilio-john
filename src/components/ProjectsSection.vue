@@ -17,7 +17,7 @@
           >
             <div class="mx-2 overflow-hidden rounded-2xl border border-outline-variant/10 bg-surface-container-low transition-all duration-300 hover:border-primary/30 hover:shadow-lg">
               <!-- Image -->
-              <div class="relative h-48 w-full overflow-hidden bg-gradient-to-b from-transparent to-background">
+              <div class="relative aspect-video w-full overflow-hidden bg-gradient-to-b from-transparent to-background">
                 <img
                   :src="project.image"
                   :alt="project.title"
@@ -353,20 +353,23 @@ onUnmounted(() => {
   gap: 1rem;
 }
 
-.modal-image-frame {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(203, 190, 255, 0.18);
-  background: rgba(14, 12, 20, 0.85);
-}
+  .modal-image-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(203, 190, 255, 0.18);
+    background: rgba(14, 12, 20, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.modal-image-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  .modal-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
 .modal-thumbs {
   display: grid;
