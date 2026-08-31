@@ -743,7 +743,7 @@ onUnmounted(() => {
 
     <footer class="w-full border-t border-outline-variant/10 bg-surface-container-low px-4 py-12 md:px-8">
       <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div class="text-sm font-medium uppercase tracking-wide text-on-surface-variant">&copy; 2024 Digital Architect. Built with precision.</div>
+        <div class="text-sm font-medium uppercase tracking-wide text-on-surface-variant">&copy; 2026 Digital Architect. Built with precision.</div>
         <div class="flex gap-8">
           <a class="text-sm font-medium uppercase tracking-wide text-on-surface-variant transition-colors duration-200 hover:text-primary" href="#"
             >Github</a
